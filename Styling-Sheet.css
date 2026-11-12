@@ -1,0 +1,45 @@
+body{
+  background-color: #340D0D;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.logo-pic{
+position: top;
+width: 500px;
+height:265px;
+align-items: center;
+}
+
+label{
+color: #F2DACE;
+justify-content: center;
+align-items: center;
+}
+
+/*this style is related to the fill in bars
+add your log in things here
+*/
+input[type="text"],input[type="email"],input[type="tel"],input[type="number"]{
+    width: 100%;
+    padding: 8px 12px;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid #AA5E7A;
+    background-color: #F2DACE;
+    color:#340D0D;
+    border-radius: 20px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #AA5E7A;
+    background-color: #AA5E7A;
+    color:#F2DACE;
+    border-radius: 20px;
+    font-weight: bold;
+}
