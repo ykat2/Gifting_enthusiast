@@ -34,6 +34,8 @@ input[type="text"],input[type="email"],input[type="password"],input[type="tel"],
     border-radius: 20px;
 }
 
+/*new update: nora's push*/
+
 input[type="submit"],button[type="submit"]{
     width: 100%;
     padding: 10px;
@@ -50,4 +52,48 @@ h1, p {
 
 a {
     color: #AA5E7A;
+}
+
+/*new update: yara's push*/
+
+.logo-homePage{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    height: auto;
+}
+
+.go-to-signIn-button{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none; /* Removes the underline bs it ancor*/
+    border: 2px solid #AA5E7A;
+    background-color: #AA5E7A;
+    color: #F2DACE;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.go-to-Login-button{
+    position: absolute;
+    top: 60px;
+    left: 160px;
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none; 
+    border: 2px solid #AA5E7A;
+    background-color: #AA5E7A;
+    color: #F2DACE;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
