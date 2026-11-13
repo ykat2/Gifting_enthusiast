@@ -92,8 +92,6 @@ function addToCart(prefix) {
     } else {
         cartCount++;
         document.getElementById("cart-count").innerHTML = cartCount;
-        message.innerHTML = "Added to cart!";
-        message.style.color = "green";
     }
 
 

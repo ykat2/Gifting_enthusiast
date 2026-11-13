@@ -112,20 +112,32 @@ a {
 
  /*new update: Nora's push*/
 
+ .idea-section {
+    max-width: 800px;
+    margin: 180px auto 0;      
+    padding: 10px;
+    text-align: center;
+    line-height: 1.6;
+    
+}
+
+.idea-section h2 {
+    color: #F2DACE;
+}
+
 .gift-card img {
     width: 100%;
     max-width: 250px;
     height: 250px;   
-    
     border-radius: 10px;
 }
 
 .gifts-section {
 display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
-    margin-top: 200px;
+    margin-top: 67px;
     padding: 20px;
 }
 
