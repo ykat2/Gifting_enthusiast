@@ -14,7 +14,7 @@
         <h1 style="text-align: center;">Sign In</h1>
         
         <a href="AboutUsPage.html">
-            <img id="logo" class="logo-pic" src="logo.png" alt="logo-png" onmouseover="changeLogo()" onmouseout="resetLogo()">
+            <img id="logo" class="logo-pic" src="logo.png" alt="logo-png">
         </a>
         <!--dont forget logo map-->
 
@@ -44,7 +44,18 @@
         <p style="text-align: center;">Already have an account? <a href="LogInPage.html">Log In</a></p>
          
         <!--this is a java script validation code-->
-       <script src="script.js"></script>
+        <script src="script.js"></script>
+            <script>
+                function changeLogo() {
+                document.getElementById("logo").src = "logo-hover.png";
+            }
 
+            function resetLogo() {
+                document.getElementById("logo").src = "logo.png";
+            }
+            var logo = document.getElementById("logo");
+            logo.addEventListener("mouseover", changeLogo);
+            logo.addEventListener("mouseout", resetLogo);
+            </script>
     </body>
 </html>
