@@ -3,7 +3,6 @@
         <title>Gift Love</title>
         <link rel="stylesheet" href="Styling-Sheet.css">
         <style>
-            
         </style>
     </head>
 
@@ -14,7 +13,7 @@
         <a href="SignInPage.html" class="menu-button">Sign Us</a>
         </nav>
 
-        <img id="logo" class="logo-AboutUs" src="logo.png" alt="logo-pic" onmouseover="changeLogo()" onmouseout="resetLogo()">
+        <img id="logo" class="logo-AboutUs" src="logo.png" alt="logo-pic">
         <h1 style="z-index: 5;text-align: center;">About Us</h1>
         <section>
             
@@ -54,7 +53,20 @@
             </div>
 
             <p style="font-style: italic; color:#AA5E7A;text-align: center;">this assignment is made by yara & nora</p>
+            
             <script src="script.js"></script>
+            <script>
+                function changeLogo() {
+                document.getElementById("logo").src = "logo-hover.png";
+            }
+
+            function resetLogo() {
+                document.getElementById("logo").src = "logo.png";
+            }
+            var logo = document.getElementById("logo");
+            logo.addEventListener("mouseover", changeLogo);
+            logo.addEventListener("mouseout", resetLogo);
+            </script>
         </section>
     </body>
 </html>
