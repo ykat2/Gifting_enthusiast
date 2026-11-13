@@ -73,7 +73,7 @@ a {
 
 /*Menues buttons*/
 
-.main-menu {
+.main-menu,.cart-icon {
     position: absolute;
     top: 60px;
     left: 20px;
@@ -170,6 +170,20 @@ display: flex;
     background-color: #733232;
 }
 
+/*cart icon styling*/
+.cart-icon {
+    font-size: 25px;
+}
+
+/*cart number styling*/
+.cart-count {
+    background-color: #eb6d6d;
+    color: white;
+    border-radius: 50px;
+    padding: 9px 10px;
+    font-size: 14px;
+}
+
 /* for intra linking */
 .gift-shortcut {
     position: absolute;
@@ -179,6 +193,7 @@ display: flex;
     gap: 10px;
     z-index: 10;
 }
+
 
 .story{
     padding: 50px;

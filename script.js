@@ -1,83 +1,101 @@
 function validateLogin() {
-  var email = document.getElementById("email").value.trim();
-  var password = document.getElementById("password").value;
-  var msg = document.getElementById("errorMsg");
+    var email = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value;
+    var msg = document.getElementById("errorMsg");
 
-  // if user entered empty box
-  if (email === "" && password === "") {
-    msg.textContent = "Please fill in all fields.";
+    // if user entered empty box
+    if (email === "" && password === "") {
+        msg.textContent = "Please fill in all fields.";
+        return false;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        msg.textContent = "Please enter a valid email.";
+        return false;
+    }
+
+    // if user entered less than 8 characters
+    if (password.length < 8) {
+        msg.textContent = "Password must be at least 8 characters.";
+        return false;
+    }
+
+    msg.textContent = "";
+    window.location.href = "HomePage.html";
     return false;
-  }
+}
 
-  if (!email.includes("@") || !email.includes(".")) {
-    msg.textContent = "Please enter a valid email.";
+function validateSignIn() {
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var phoneNumber = document.getElementById("phoneNumber").value.trim();
+    var password = document.getElementById("password").value.trim();
+    var age = document.getElementById("age").value.trim();
+
+    var errorMsg = document.getElementById("errorMsg");
+
+    //if user enterned empty entries
+    if (name === "" && password === "" && phoneNumber === "" && email === "" && age === "") {
+        errorMsg.textContent = "Please fill in all fields.";
+        return false;
+    }
+
+    if (name === "") {
+        errorMsg.textContent = "Please fill in your name. ";
+        return false;
+    }
+
+    if (password.length < 8) {
+        errorMsg.textContent = "Password must be at least 8 characters.";
+        return false;
+    }
+
+    if (phoneNumber.length < 10) {
+        errorMsg.textContent = "Please enter a valid phone number. ";
+        return false;
+    }
+
+    if (age < 10 || age > 80) {
+        errorMsg.textContent = "Age must be between 10 and 80";
+        return false;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+        errorMsg.textContent = "Please enter a valid email.";
+        return false;
+    }
+
+    errorMsg.textContent = "";
+    window.location.href = "HomePage.html";
     return false;
-  }
-
-  // if user entered less than 8 characters
-  if (password.length < 8) {
-    msg.textContent = "Password must be at least 8 characters.";
-    return false;
-  }
-
-  msg.textContent = "";
-  window.location.href = "HomePage.html";
-  return false;
-}
-
-function validateSignIn(){
-var name = document.getElementById("name").value.trim();
-var email = document.getElementById("email").value.trim();
-var phoneNumber = document.getElementById("phoneNumber").value.trim();
-var password = document.getElementById("password").value.trim();
-var age = document.getElementById("age").value.trim();
-
-var errorMsg = document.getElementById("errorMsg");
-
-//if user enterned empty entries
-if (name === "" && password === "" && phoneNumber === "" && email === "" && age === "") {
-  errorMsg.textContent = "Please fill in all fields.";
-  return false;
-}
-
-if(name === ""){
-  errorMsg.textContent = "Please fill in your name. ";
-  return false;
-}
-
-if (password.length < 8) {
-  errorMsg.textContent = "Password must be at least 8 characters.";
-  return false;
-}
-
-if (phoneNumber.length < 10){
-  errorMsg.textContent = "Please enter a valid phone number. ";
-  return false;
-}
-
-if(age < 10 || age > 80){
-  errorMsg.textContent = "Age must be between 10 and 80";
-  return false;
-}
-
-if (!email.includes("@") || !email.includes(".")) {
-  errorMsg.textContent = "Please enter a valid email.";
-  return false;
-}
-
-errorMsg.textContent = "";
-window.location.href = "HomePage.html";
-return false;
 }
 
 
-// change logo image when user hovers over it
-function changeLogo() {
-    document.getElementById("logo").src = "logo-hover.png";
-}
 
-function resetLogo() {
-    document.getElementById("logo").src = "logo.png";
-}
+// here i will add the function to add the selected gift to the cart
+var cartCount = 0;
+function addToCart(prefix) {
+    var selected = 0;
+    for (var i = 1; i <= 3; i++) {
+        var box = document.getElementById(prefix + i);
+        if (box.checked) {
+            selected++;
+        }
+    }
+    if (selected == 0) {
+        var message = document.getElementById("msg-" + prefix);
+
+    }
+    if (selected == 0) {
+        message.innerHTML = "Please choose at least one option first!";
+        message.style.color = "#eb6d6d";
+    } else {
+        cartCount++;
+        document.getElementById("cart-count").innerHTML = cartCount;
+        message.innerHTML = "Added to cart!";
+        message.style.color = "green";
+    }
 
 
+
+}   

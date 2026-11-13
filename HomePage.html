@@ -5,7 +5,9 @@
         <link rel="stylesheet" href="Styling-Sheet.css">
     </head>
     <body>
-        <img id="logo" class="logo-homePage" src="logo.png" alt="logo-png" onmouseover="changeLogo()" onmouseout="resetLogo()">
+
+        <a href="AboutUsPage.html">
+        <img id="logo" class="logo-homePage" src="logo.png" alt="logo-png""></a>
         
          <!--dont forget logo map-->
 
@@ -14,6 +16,7 @@
     <a href="SignInPage.html" class="menu-button">Sign In</a>
     <a href="LogInPage.html" class="menu-button">Log In</a>
     <a href="AboutUsPage.html" class="menu-button">About Us</a>
+    <span class="cart-icon">🛒 <span id="cart-count" class="cart-count">0</span></span>
        </nav>
 
 
@@ -33,11 +36,13 @@
         <h2>Graduation Gift</h2>
         <h3>Customize your gift</h3>
         <ul class="gift-options">
-            <li> <label> <input type="checkbox" name="graduation" value="mirror"> Mirror with the Graduate’s Name </label> </li>
-           <li> <label> <input type="checkbox" name="graduation" value="Keychain"> Graduation Year Keychain </label> </li>
-        <li> <label> <input type="checkbox" name="graduation" value="Sash"> Mini Graduation Sash with Year </label> </li>
+            <li> <label> <input type="checkbox" name="graduation" value="mirror" id="grad1"> Mirror with the Graduate’s Name </label> </li>
+           <li> <label> <input type="checkbox" name="graduation" value="Keychain" id="grad2"> Graduation Year Keychain </label> </li>
+        <li> <label> <input type="checkbox" name="graduation" value="Sash" id="grad3"> Mini Graduation Sash with Year </label> </li>
         </ul>
-        <button type="button" class="add-to-cart-button">Add to Cart</button>
+        <button type="button" class="add-to-cart-button" onclick="addToCart('grad')">Add to Cart</button>
+        <p id="msg-grad"></p>
+
         </article>
 
       <article class="gift-card" id="birthday">
@@ -45,29 +50,43 @@
         <h2>Birthday Gift</h2>
         <h3>Customize your gift</h3>
         <ul class="gift-options">
-            <li> <label> <input type="checkbox" name="birthday" value="candle"> Scented Candle </label> </li>
-           <li> <label> <input type="checkbox" name="birthday" value="perfume">Mini Perfume </label> </li>
-        <li> <label> <input type="checkbox" name="birthday" value="necklace"> Necklace </label> </li>
+            <li> <label> <input type="checkbox" name="birthday" value="candle" id="birth1"> Scented Candle </label> </li>
+           <li> <label> <input type="checkbox" name="birthday" value="perfume" id="birth2">Mini Perfume </label> </li>
+        <li> <label> <input type="checkbox" name="birthday" value="necklace" id="birth3"> Necklace </label> </li>
         </ul>
-        <button type="button" class="add-to-cart-button">Add to Cart</button>
+        <button type="button" class="add-to-cart-button" onclick="addToCart('birth')">Add to Cart</button>
+        <p id="msg-birth"></p>
         </article>
 
          <article class="gift-card" id="newborn">
         <img src="newborn-box.jpg" alt="Newborn gift box">
-        <h2>Newborn Gift</h2>
+        <h2>Newborn Gift</h2
         <h3>Customize your gift</h3>
         <ul class="gift-options">
-            <li> <label> <input type="checkbox" name="newborn" value="bear"> Mini Teddy Bear </label> </li>
-           <li> <label> <input type="checkbox" name="newborn" value="outfit">Newborn Outfit </label> </li>
-        <li> <label> <input type="checkbox" name="newborn" value="blanket">Soft Baby Blanket </label> </li>
+            <li> <label> <input type="checkbox" name="newborn" value="bear" id="new1"> Mini Teddy Bear </label> </li>
+           <li> <label> <input type="checkbox" name="newborn" value="outfit" id="new2">Newborn Outfit </label> </li>
+        <li> <label> <input type="checkbox" name="newborn" value="blanket" id="new3">Soft Baby Blanket </label> </li>
         </ul>
-       <button type="button" class="add-to-cart-button">Add to Cart</button>
+       <button type="button" class="add-to-cart-button" onclick="addToCart('new')">Add to Cart</button>
+        <p id="msg-new"></p>
         </article>
         
 
         </section>
 
-      <script src="script.js"></script>
+     <script src="script.js"></script>
+            <script>
+                function changeLogo() {
+                document.getElementById("logo").src = "logo-hover.png";
+            }
+
+            function resetLogo() {
+                document.getElementById("logo").src = "logo.png";
+            }
+            var logo = document.getElementById("logo");
+            logo.addEventListener("mouseover", changeLogo);
+            logo.addEventListener("mouseout", resetLogo);
+            </script>
 
     </body>
 </html>
