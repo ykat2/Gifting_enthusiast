@@ -1,36 +1,44 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Gift Love</title>
         <link rel="stylesheet" href="Styling-Sheet.css">
     </head>
     <body>
+
+    <nav class="main-menu">
+    <a href="HomePage.html" class="menu-button">Home</a>
+    <a href="LogInPage.html" class="menu-button">Log In</a>
+    <a href="AboutUsPage.html" class="menu-button">About Us</a>
+    </nav>
+
+        <h1 style="text-align: center;">Sign In</h1>
         <img class="logo-pic" src="logo.png" alt="logo picture">
         <!--dont forget logo map-->
 
         <!--this is a java script validation code-->
-        <form onsubmit="return validateSignIn()"novalidate>
-            
+        <form onsubmit="return validateSignIn()" novalidate>
         <label>Enter Your Name: </label><br>
-        <input type="text" name="name" size="30" maxlength="50" placeholder="your name..."><br>
+        <input type="text" id="name" name="name" size="30" maxlength="50" placeholder="your name..."><br>
 
         <label>Enter Your Email: </label><br>
-        <input type="email" name="email" placeholder="your email..."><br>
+        <input type="email" id="email" name="email" placeholder="your email..."><br>
 
         <label>Enter Your Phone Number: </label><br>
-        <input type="tel" name="phoneNumber" placeholder="+966..." pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+966..." pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
 
         <label>How Old Are You? </label><br>
-        <input type="number" name="age" value="10" min="10" max="80"><br><br><br>
+        <input type="number" id="age" name="age" placeholder="enter your age" min="10" max="80"><br>
 
         <label>Enter Your Password: </label><br>
-        <input type="password" name="password" placeholder="your password..."><br>
+        <input type="password" id="password" name="password" placeholder="your password..."><br>
         
         <!-- error message when validation fails -->
         <p id="errorMsg"></p>
 
         <input type="submit" name="sign-in" value="Sign in"><br>
         </form>
+
+        <p style="text-align: center;">Already have an account? <a href="LogInPage.html">Log In</a></p>
          
         <!--this is a java script validation code-->
        <script src="script.js"></script>
