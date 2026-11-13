@@ -98,13 +98,12 @@ a {
 
 
 
-.go-to-signIn-button,
-.go-to-Login-button {
-    z-index: 10;
+.main-menu {
+    z-index: 10;   /* menue above logo*/
 }
 
 .logo-homePage {
-    z-index: 5;
+    z-index: 5;    /* logo under menue*/
 }
 
  /*new update: Nora's push*/
