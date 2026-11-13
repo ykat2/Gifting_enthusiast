@@ -3,3 +3,12 @@ test test file
 نرسل للدكتوره كلابريشن
 الاباوت اس نحط حسابات سوشل ميديا مثلا في جدول
 الليست بالهدايا الكوستمايز
+ Add an image that represents your assignment on each page. Then use the
+mapping technique to link this image to the “About us” page.
+
+Add links to navigate between your assignment pages. All pages should be linked
+properly and connected together.
+
+object-fit: cover; add it if u made sure its not something extra
+
+نضيف ملف الجافاسكربت والفلديشن

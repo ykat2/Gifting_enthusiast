@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <title>LogInPage</title>
+    <title>Gift Love</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="Styling-Sheet.css">
 </head>
 <body>
     <main>
         <section>
-            <h1 style="text-align: center;">Log In</h1>
-            <img class="logo-pic" src="logo.png" alt="logo picture">
-            <form onsubmit="return validateLogin()">
+             <h1 style="text-align: center;">Log In</h1>
+             <img class="logo-pic" src="logo.png" alt="logo picture">
+             <!--dont forget logo map-->
+
+             <!--this is a java script validation code-->
+             <form onsubmit="return validateLogin()">
+
              <label for="email">Email</label>
              <input type="email" id="email" name="email" placeholder="example@email.com">
              <br>
              <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password">
-            <p id="errorMsg"></p>
-           <button type="submit">Log in</button>
-            </form>
+             <input type="password" id="password" name="password" placeholder="Enter your password">
+
+              <!--this is a java script validation code-->
+             <p id="errorMsg"></p>
+             
+             <button type="submit">Log in</button>
+            
+             </form>
            <p style="text-align: center;">Don't have an account? <a href="SignInPage.html">Sign up</a></p>
         </section>
     </main>
