@@ -9,16 +9,25 @@
          <!--dont forget logo map-->
 
 
-        <a href="SignInPage.html" class="go-to-signIn-button">Sign In</a>
-        <a href="LogInPage.html" class="go-to-Login-button">Log In</a>
+        <nav class="main-menu">
+    <a href="SignInPage.html" class="menu-button">Sign In</a>
+    <a href="LogInPage.html" class="menu-button">Log In</a>
+    <a href="AboutUsPage.html" class="menu-button">About Us</a>
+       </nav>
 
 
         
+        <nav class="gift-shortcut">
+        <a href="#graduation">Graduation</a>
+        <a href="#birthday">Birthday</a>
+        <a href="#newborn">Newborn</a>
+        </nav> 
 
         <!--gift boxes part-->
         <section class="gifts-section">
 
-        <article class="gift-card">
+
+        <article class="gift-card" id="graduation">
         <img src="graduation-box.jpg" alt="Graduation gift box">
         <h2>Graduation Gift</h2>
         <h3>Customize your gift</h3>
@@ -30,7 +39,7 @@
         <button type="button" class="add-to-cart-button">Add to Cart</button>
         </article>
 
-      <article class="gift-card">
+      <article class="gift-card" id="birthday">
         <img src="birthday-box.jpg" alt="Birthday gift box">
         <h2>Birthday Gift</h2>
         <h3>Customize your gift</h3>
@@ -42,21 +51,20 @@
         <button type="button" class="add-to-cart-button">Add to Cart</button>
         </article>
 
-         <article class="gift-card">
-        <img src="newborn-box.jpg" alt="Birthday gift box">
+         <article class="gift-card" id="newborn">
+        <img src="newborn-box.jpg" alt="Newborn gift box">
         <h2>Newborn Gift</h2>
         <h3>Customize your gift</h3>
         <ul class="gift-options">
-            <li> <label> <input type="checkbox" name="birthday" value="bear"> Mini Teddy Bear </label> </li>
-           <li> <label> <input type="checkbox" name="birthday" value="outfit">Newborn Outfit </label> </li>
-        <li> <label> <input type="checkbox" name="birthday" value="blanket">Soft Baby Blanket </label> </li>
+            <li> <label> <input type="checkbox" name="newborn" value="bear"> Mini Teddy Bear </label> </li>
+           <li> <label> <input type="checkbox" name="newborn" value="outfit">Newborn Outfit </label> </li>
+        <li> <label> <input type="checkbox" name="newborn" value="blanket">Soft Baby Blanket </label> </li>
         </ul>
        <button type="button" class="add-to-cart-button">Add to Cart</button>
         </article>
-
+        
 
         </section>
-
 
 
     </body>

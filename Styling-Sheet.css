@@ -67,15 +67,23 @@ a {
     height: auto;
 }
 
-.go-to-signIn-button{
+/*Menues buttons*/
+
+.main-menu {
     position: absolute;
     top: 60px;
     left: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.menu-button {
     display: inline-block;
     width: 100px;
     padding: 10px;
     text-align: center;
-    text-decoration: none; /* Removes the underline bs it ancor*/
+    text-decoration: none;
     border: 2px solid #AA5E7A;
     background-color: #AA5E7A;
     color: #F2DACE;
@@ -84,22 +92,11 @@ a {
     cursor: pointer;
 }
 
-.go-to-Login-button{
-    position: absolute;
-    top: 60px;
-    left: 160px;
-    display: inline-block;
-    width: 100px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none; 
-    border: 2px solid #AA5E7A;
-    background-color: #AA5E7A;
-    color: #F2DACE;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
+.menu-button:hover {
+    background-color: #4a1a1a;
 }
+
+
 
 .go-to-signIn-button,
 .go-to-Login-button {
@@ -164,6 +161,18 @@ display: flex;
     border-radius: 20px;
     font-weight: bold; 
      cursor: pointer;         
+}
+
+
+
+/* for intra linking */
+.gift-shortcut {
+    position: absolute;
+    top: 70px;
+    right: 360px;        
+    display: flex;
+    gap: 10px;
+    z-index: 10;
 }
 
 
