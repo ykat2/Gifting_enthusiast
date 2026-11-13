@@ -71,3 +71,13 @@ return false;
 }
 
 
+// change logo image when user hovers over it
+function changeLogo() {
+    document.getElementById("logo").src = "logo-hover.png";
+}
+
+function resetLogo() {
+    document.getElementById("logo").src = "logo.png";
+}
+
+

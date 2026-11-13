@@ -48,6 +48,10 @@ input[type="submit"],button[type="submit"]{
     font-weight: bold;
 }
 
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #733232;
+}
 
 h1, p {
     color: #F2DACE;
@@ -93,7 +97,7 @@ a {
 }
 
 .menu-button:hover {
-    background-color: #4a1a1a;
+    background-color: #733232;
 }
 
 
@@ -162,7 +166,9 @@ display: flex;
      cursor: pointer;         
 }
 
-
+.add-to-cart-button:hover {
+    background-color: #733232;
+}
 
 /* for intra linking */
 .gift-shortcut {
