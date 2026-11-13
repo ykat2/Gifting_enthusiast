@@ -10,17 +10,17 @@
 </head>
 <body>
 
-        <nav class="main-menu">
+    <nav class="main-menu">
     <a href="HomePage.html" class="menu-button">Home</a>
     <a href="SignInPage.html" class="menu-button">Sign In</a>
     <a href="AboutUsPage.html" class="menu-button">About Us</a>
-       </nav>
+    </nav>
 
     <main>
         <section>
              <h1 style="text-align: center;">Log In</h1>
             <a href="AboutUsPage.html">
-                <img id="logo" class="logo-pic" src="logo.png" alt="logo-png" onmouseover="changeLogo()" onmouseout="resetLogo()">
+                <img id="logo" class="logo-pic" src="logo.png" alt="logo-png" >
             </a>
              <!--dont forget logo map-->
 
@@ -45,6 +45,18 @@
 
     <!--this is a java script validation code-->
     <script src="script.js"></script>
+            <script>
+                function changeLogo() {
+                document.getElementById("logo").src = "logo-hover.png";
+            }
+
+            function resetLogo() {
+                document.getElementById("logo").src = "logo.png";
+            }
+            var logo = document.getElementById("logo");
+            logo.addEventListener("mouseover", changeLogo);
+            logo.addEventListener("mouseout", resetLogo);
+            </script>
    
 
 </body>
